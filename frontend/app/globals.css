@@ -137,6 +137,21 @@
   background-size: 40px 40px;
 }
 
+/* Smooth dark/light mode transition */
+html {
+  transition:
+    background-color 700ms ease,
+    color 700ms ease;
+}
+
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 700ms;
+  transition-timing-function: ease;
+}
+
 /* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,
