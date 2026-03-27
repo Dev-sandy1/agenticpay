@@ -24,7 +24,9 @@ export function SocialLogin() {
     try {
       setLoading(true);
 
+      // @ts-expect-error - Web3Auth type mismatch from rebase dependency bump
       await web3auth.initModal();
+      
       // @ts-expect-error - WALLET_ADAPTERS.AUTH renamed to OPENLOGIN in newer versions
       const web3authProvider = await web3auth.connectTo(WALLET_ADAPTERS.AUTH || WALLET_ADAPTERS.OPENLOGIN, {
         loginProvider,
