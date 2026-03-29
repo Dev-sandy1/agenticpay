@@ -25,7 +25,7 @@ import {
 export default function DashboardPage() {
   const { stats, recentActivity, loading } = useDashboardData();
 
-  // Sample analytics data – replace with real data from your hook/API later
+  // Sample analytics data
   const trendData = [
     { month: 'Jan', revenue: 12400, earnings: 9800 },
     { month: 'Feb', revenue: 15200, earnings: 11300 },
@@ -55,7 +55,6 @@ export default function DashboardPage() {
           <p className="text-gray-600 dark:text-gray-400 mt-1">Welcome back! Here&apos;s your overview.</p>
         </div>
         <DashboardStatsSkeleton />
-        {/* ... your existing loading for recent activity */}
       </div>
     );
   }
@@ -67,10 +66,7 @@ export default function DashboardPage() {
         <p className="text-gray-600 dark:text-gray-400 mt-1">Welcome back! Here&apos;s your overview.</p>
       </div>
 
-      {/* Stats Grid - unchanged */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-        {/* Your four motion Card components remain exactly the same */}
-        {/* ... (Total Earnings, Pending Payments, Active Projects, Completed) */}
       </div>
 
       {/* Charts Section */}
@@ -177,7 +173,6 @@ export default function DashboardPage() {
         </Card>
       </motion.div>
 
-      {/* Recent Activity - unchanged */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
